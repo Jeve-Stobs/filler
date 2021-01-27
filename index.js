@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5001;
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server, { pingTimeout: 9999999 });
+const io = socketio(server, { pingTimeout: 5000 });
 
 // for static resources requested by index.html (css, js)
 app.use("/public", express.static(path.join(__dirname, "public")));       
